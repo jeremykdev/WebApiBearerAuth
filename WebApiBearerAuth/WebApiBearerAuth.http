@@ -1,0 +1,22 @@
+@WebApiBearerAuth_HostAddress = https://localhost:7152
+ 
+###
+
+GET {{WebApiBearerAuth_HostAddress}}/api/echo/Echo?input=test
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJCb2IiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiRW1wbG95ZWUiLCJNYW5hZ2VyIl0sImV4cCI6MTczMjU2OTgxMiwiaXNzIjoiVGVzdCBTeXN0ZW0iLCJhdWQiOiJFY2hvQXBpIn0.KmtyJ5PDVTfikEtl8gOrUSW12YB6CEv12BwRLI_ttgU
+###
+
+POST {{WebApiBearerAuth_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "Bob",
+  "password": "test"
+}
+
+###
+
+GET {{WebApiBearerAuth_HostAddress}}/api/echo/EchoExt1?input=testing+ext1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJCb2IiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiRW1wbG95ZWUiLCJNYW5hZ2VyIl0sImV4cCI6MTcyNDAyMDA4NCwiaXNzIjoiVGVzdCBTeXN0ZW0iLCJhdWQiOiJFY2hvQXBpIn0.nLOOq3j7HZDJsH5SKXrQOyJHuXeST1nMwZk48Zokc3w
+
+###
